@@ -12,30 +12,25 @@ import javax.validation.constraints.Size;
 @Entity
 @Table(name = "Book")
 public class BookEntity {
-		
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	
+
 	@Column
-	
-	@Min(min=5)
+@Min(value=5)
 	private String name;
-	
+
 	@Column
 	private String description;
 	@Column
 	private String author;
 	@Column
 	private String price;
-	
-	
+
 	@Column
 	private String isbn;
-private String  classification;
-	
-	
+	private String classification;
 
 	public BookEntity(Integer id, String name, String description, String author, String price, String isbn,
 			String classification) {
@@ -48,53 +43,61 @@ private String  classification;
 		this.isbn = isbn;
 		this.classification = classification;
 	}
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	public String getDescription() {
 		return description;
 	}
+
 	public void setDescription(String description) {
 		this.description = description;
 	}
+
 	public String getAuthor() {
 		return author;
 	}
+
 	public void setAuthor(String author) {
 		this.author = author;
 	}
+
 	public String getPrice() {
 		return price;
 	}
+
 	public void setPrice(String price) {
 		this.price = price;
 	}
+
 	public String getIsbn() {
 		return isbn;
 	}
+
 	public void setIsbn(String isbn) {
 		this.isbn = isbn;
 	}
+
 	public String getClassification() {
 		return classification;
 	}
+
 	public void setClassification(String classification) {
 		this.classification = classification;
 	}
-
-	
-	
-	
-	
-	
 
 }
